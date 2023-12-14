@@ -5,11 +5,12 @@
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_fk2g4")
+metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(0, 0, 32, 0, 32, 64, 56, 64, 80, 80, 96, 80, 104, 72, 120, 72, 120, 56, 128, 56, 128, 112, 152, 112, 152, 56, 176, 56, 192, 72, 208, 72, 216, 64, 232, 64, 232, 48, 248, 48, 248, 0, 264, 0, 264, 152, 0, 152)
+polygon = PackedVector2Array(0, 0, 32, 0, 32, 64, 56, 64, 80, 80, 96, 80, 104, 72, 120, 72, 120, 56, 128, 56, 128, 88, 152, 88, 152, 56, 176, 56, 192, 72, 208, 72, 216, 64, 232, 64, 232, 48, 248, 48, 320, 48, 344, 0, 344, 152, 0, 152)
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
 polygon = PackedVector2Array(45, 48, 42, 51, 42, 51)
