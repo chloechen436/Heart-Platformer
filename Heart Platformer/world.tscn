@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjvfn0p8aay1e"]
+[gd_scene load_steps=4 format=3 uid="uid://cjvfn0p8aay1e"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_fk2g4"]
 [ext_resource type="PackedScene" uid="uid://daqf0l4ldhyk3" path="res://player.tscn" id="2_fdvgf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6v2ih"]
+size = Vector2(11.223, 42.8223)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_fk2g4")
@@ -19,3 +22,18 @@ polygon = PackedVector2Array(45, 48, 42, 51, 42, 51)
 [node name="Player" parent="." instance=ExtResource("2_fdvgf")]
 position = Vector2(65, 54)
 scale = Vector2(1.15456, 1)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(242, -13)
+rotation = 3.14159
+scale = Vector2(3.53524, 2.8819)
+shape = SubResource("RectangleShape2D_6v2ih")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
+offset_left = 222.0
+offset_top = -75.0
+offset_right = 262.0
+offset_bottom = -35.0
+scale = Vector2(1.01433, 3.09032)
