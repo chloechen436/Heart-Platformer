@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjvfn0p8aay1e"]
+[gd_scene load_steps=7 format=3 uid="uid://cjvfn0p8aay1e"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_fk2g4"]
 [ext_resource type="PackedScene" uid="uid://daqf0l4ldhyk3" path="res://player.tscn" id="2_fdvgf"]
 [ext_resource type="PackedScene" uid="uid://ct4nmqbu40vrf" path="res://spikes.tscn" id="3_3fpj7"]
+[ext_resource type="PackedScene" uid="uid://b7ssnkt4brfcg" path="res://heart.tscn" id="5_frl3s"]
+[ext_resource type="PackedScene" uid="uid://cbmvs6l784pvc" path="res://level_completed.tscn" id="5_oku61"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6v2ih"]
-size = Vector2(11.223, 42.8223)
+size = Vector2(11.223, 39.1078)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_fk2g4")
@@ -29,16 +31,16 @@ scale = Vector2(1.15456, 1)
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(242, -13)
+position = Vector2(242, -7.6476)
 rotation = 3.14159
 scale = Vector2(3.53524, 2.8819)
 shape = SubResource("RectangleShape2D_6v2ih")
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
 offset_left = 222.0
-offset_top = -75.0
+offset_top = -64.0
 offset_right = 262.0
-offset_bottom = -35.0
+offset_bottom = -28.0
 scale = Vector2(1.01433, 3.09032)
 
 [node name="Spikes" parent="." instance=ExtResource("3_3fpj7")]
@@ -53,3 +55,32 @@ position = Vector2(160, 112)
 [node name="Spikes4" parent="." instance=ExtResource("3_3fpj7")]
 position = Vector2(240, 48)
 rotation = 3.14159
+
+[node name="Heart" parent="." instance=ExtResource("5_frl3s")]
+position = Vector2(88, 64)
+
+[node name="Heart2" parent="." instance=ExtResource("5_frl3s")]
+position = Vector2(88, 56)
+
+[node name="Heart3" parent="." instance=ExtResource("5_frl3s")]
+position = Vector2(152, 40)
+
+[node name="Heart4" parent="." instance=ExtResource("5_frl3s")]
+position = Vector2(232, 72)
+
+[node name="Heart5" parent="." instance=ExtResource("5_frl3s")]
+position = Vector2(240, 72)
+
+[node name="Heart6" parent="." instance=ExtResource("5_frl3s")]
+position = Vector2(280, 32)
+
+[node name="Heart7" parent="." instance=ExtResource("5_frl3s")]
+position = Vector2(216, -104)
+
+[node name="Heart8" parent="." instance=ExtResource("5_frl3s")]
+position = Vector2(328, -72)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelCompleted" parent="CanvasLayer" instance=ExtResource("5_oku61")]
+visible = false
